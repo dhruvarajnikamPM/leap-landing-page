@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO: Title ≤60 chars -->
+  <title>LEAP | 24-Week Action Startup Cohort — India</title>
+  <!-- SEO: Meta Description ≤155 chars -->
+  <meta name="description"
+    content="LEAP is India's 24-week action startup cohort. Ship an MVP, acquire customers, earn real revenue, and pitch on Demo Day. Apply for the next cohort." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://leapmovement.in/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://leapmovement.in/" />
+  <meta property="og:title" content="LEAP | 24-Week Action Startup Cohort — India" />
+  <meta property="og:description"
+    content="Ship an MVP, acquire real customers, earn revenue, and pitch on Demo Day. 24 weeks. 6 phases. One cohort." />
+  <meta property="og:image" content="https://leapmovement.in/og-image.jpg" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LEAP | 24-Week Action Startup Cohort" />
+  <meta name="twitter:description" content="Ship an MVP, acquire customers, earn revenue, Demo Day. 24 weeks. India." />
+  <meta name="twitter:image" content="https://leapmovement.in/og-image.jpg" />
+
+  <!-- Program JSON-LD Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOccupationalProgram",
+      "name": "LEAP — 24-Week Action Startup Cohort",
+      "description": "A 24-week immersive cohort program taking students across 6 phases: Discover, Validate, Build, Operate, Grow, and Fundraise. Students ship MVPs, acquire customers, generate revenue, and pitch at Demo Day.",
+      "provider": {
+        "@type": "Organization",
+        "name": "LEAP Practical Education Movement",
+        "url": "https://leapmovement.in"
+      },
+      "programType": "Entrepreneurship Cohort",
+      "occupationalCategory": "Startup Founder, Entrepreneur",
+      "timeToComplete": "P24W",
+      "educationalProgramMode": "blended",
+      "inLanguage": "en-IN",
+      "offers": {
+        "@type": "Offer",
+        "category": "Cohort Tuition",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/LimitedAvailability"
+      },
+      "hasCourse": [
+        { "@type": "Course", "name": "Phase 1: Discover", "description": "Problem discovery, research, and content-led exploration. Weeks 1–4." },
+        { "@type": "Course", "name": "Phase 2: Validate", "description": "Sales challenges and revenue testing. Weeks 5–8." },
+        { "@type": "Course", "name": "Phase 3: Build", "description": "MVP development and industry immersion. Weeks 9–12." },
+        { "@type": "Course", "name": "Phase 4: Operate", "description": "Supply chain, logistics, real operations. Weeks 13–16." },
+        { "@type": "Course", "name": "Phase 5: Grow", "description": "Distribution, growth loops, community building. Weeks 17–20." },
+        { "@type": "Course", "name": "Phase 6: Fundraise", "description": "Pitch decks, VC simulation, Demo Day. Weeks 21–24." }
+      ]
+    }
+    </script>
+
+  <!-- FAQ JSON-LD Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is LEAP for?",
+          "acceptedAnswer": { "@type": "Answer", "text": "LEAP is designed for college students (undergraduate and postgraduate) who want to build real startups during their academic years. It is also open to recent graduates." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the 24-week program cover?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The program spans 6 phases: Discover (problem research), Validate (revenue testing), Build (MVP development), Operate (supply chain and ops), Grow (distribution and marketing), and Fundraise (pitching and Demo Day)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I build a real startup in this program?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Students are expected to ship working MVPs, talk to real customers, generate revenue, and present at Demo Day. The program is 70% real-world execution and 30% in-class learning." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I apply?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Click 'Apply Now' and complete the pre-qualification form with your phone number and college name. Our team will schedule an interview within 48 hours." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can my college enroll as a partner institution?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. LEAP works with colleges to run the cohort on-campus with institutional support, bulk enrollment, and proctored sessions. Use the institutional contact form to reach our team." }
+        },
+        {
+          "@type": "Question",
+          "name": "When does the next cohort start?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The next cohort starts on April 20, 2026. Seats are limited. Apply early to secure your place." }
+        }
+      ]
+    }
+    </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* ============================================================
+         DESIGN TOKEN SYSTEM — CSS Custom Properties
+         Dark mode default; data-theme="light-saffron|light-arctic|light-forest"
+         ============================================================ */
+
+    /* ── Dark Theme (default) ── */
+    :root,
+    [data-theme="dark"] {
+      /* Backgrounds */
+      --color-bg-primary: #06060E;
+      --color-bg-secondary: #0A0A14;
+      --color-bg-tertiary: #0F0F1C;
+      --color-bg-glass: rgba(10, 10, 22, 0.72);
+      --color-bg-overlay: rgba(6, 6, 14, 0.88);
+      /* Surfaces */
+      --color-surface-card: #12121E;
+      --color-surface-elevated: #18182A;
+      --color-surface-input: #0D0D1A;
+      /* Text */
+      --color-text-primary: #EEEEF8;
+      --color-text-secondary: #9696B4;
+      --color-text-muted: #56566E;
+      --color-text-inverse: #06060E;
+      /* Brand */
+      --color-brand-primary: #3B7BFF;
+      --color-brand-primary-hover: #5B94FF;
+      --color-brand-primary-light: rgba(59, 123, 255, 0.14);
+      --color-brand-accent: #F59E0B;
+      --color-brand-accent-hover: #FBB540;
+      --color-brand-success: #10B981;
+      --color-brand-error: #EF4444;
+      /* Borders */
+      --color-border-default: rgba(255, 255, 255, 0.07);
+      --color-border-subtle: rgba(255, 255, 255, 0.03);
+      --color-border-focus: #3B7BFF;
+      --color-border-active: rgba(59, 123, 255, 0.35);
+      /* Phase Colors */
+      --phase-discover: #3B7BFF;
+      --phase-validate: #10B981;
+      --phase-build: #A855F7;
+      --phase-operate: #F97316;
+      --phase-grow: #EC4899;
+      --phase-fundraise: #F59E0B;
+      /* Announcement bar */
+      --color-announcement-bg: #1200EE;
+      --color-announcement-text: #ffffff;
+
+      /* ── TYPOGRAPHY SCALE (clamp-based, 72px hard cap) ── */
+      --type-hero: clamp(44px, 6vw, 72px);
+      --type-display: clamp(36px, 5vw, 62px);
+      --type-xl: clamp(24px, 3.2vw, 40px);
+      --type-lg: clamp(19px, 2.4vw, 28px);
+      --type-base: 16px;
+      --type-sm: 14px;
+      --type-xs: 11px;
+      --line-hero: 1.08;
+      --line-display: 1.1;
+      --line-body: 1.65;
+      --tracking-tight: -0.025em;
+      --tracking-normal: 0em;
+      --tracking-wide: 0.08em;
+      --tracking-widest: 0.14em;
+      --measure: 66ch;
+      /* max comfortable line length */
+
+      /* ── MOTION TOKENS ── */
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-reveal: cubic-bezier(0.22, 0.9, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --dur-fast: 160ms;
+      --dur-base: 260ms;
+      --dur-slow: 400ms;
+    }
+
+    /* ── Light Palette 1: Saffron Dawn ── */
+    [data-theme="light-saffron"] {
+      --color-bg-primary: #FEFCF5;
+      --color-bg-secondary: #FFF8E7;
+      --color-bg-tertiary: #FEF3D0;
+      --color-bg-glass: rgba(254, 252, 245, 0.85);
+      --color-bg-overlay: rgba(254, 252, 245, 0.95);
+      --color-surface-card: #FFFDF7;
+      --color-surface-elevated: #FFFFFF;
+      --color-surface-input: #FFFEF9;
+      --color-text-primary: #1A1208;
+      --color-text-secondary: #4A3E20;
+      --color-text-muted: #7A6840;
+      --color-text-inverse: #FEFCF5;
+      --color-brand-primary: #D97706;
+      --color-brand-primary-hover: #B45309;
+      --color-brand-primary-light: rgba(217, 119, 6, 0.12);
+      --color-brand-accent: #1D4ED8;
+      --color-border-default: rgba(26, 18, 8, 0.12);
+      --color-border-subtle: rgba(26, 18, 8, 0.06);
+      --color-border-focus: #D97706;
+      --color-border-active: rgba(217, 119, 6, 0.35);
+      --color-announcement-bg: #D97706;
+      --color-announcement-text: #ffffff;
+    }
+
+    /* ── Light Palette 2: Arctic Clarity ── */
+    [data-theme="light-arctic"] {
+      --color-bg-primary: #F8FAFF;
+      --color-bg-secondary: #EEF2FF;
+      --color-bg-tertiary: #E0E7FF;
+      --color-bg-glass: rgba(248, 250, 255, 0.88);
+      --color-bg-overlay: rgba(248, 250, 255, 0.96);
+      --color-surface-card: #FFFFFF;
+      --color-surface-elevated: #FFFFFF;
+      --color-surface-input: #F1F5FE;
+      --color-text-primary: #0F172A;
+      --color-text-secondary: #334155;
+      --color-text-muted: #64748B;
+      --color-text-inverse: #F8FAFF;
+      --color-brand-primary: #1D4ED8;
+      --color-brand-primary-hover: #1E40AF;
+      --color-brand-primary-light: rgba(29, 78, 216, 0.10);
+      --color-brand-accent: #D97706;
+      --color-border-default: rgba(15, 23, 42, 0.10);
+      --color-border-subtle: rgba(15, 23, 42, 0.05);
+      --color-border-focus: #1D4ED8;
+      --color-border-active: rgba(29, 78, 216, 0.35);
+      --color-announcement-bg: #1D4ED8;
+      --color-announcement-text: #ffffff;
+    }
+
+    /* ── Light Palette 3: Forest Growth ── */
+    [data-theme="light-forest"] {
+      --color-bg-primary: #F4FBF4;
+      --color-bg-secondary: #E8F5E8;
+      --color-bg-tertiary: #D1EBD1;
+      --color-bg-glass: rgba(244, 251, 244, 0.88);
+      --color-bg-overlay: rgba(244, 251, 244, 0.96);
+      --color-surface-card: #FFFFFF;
+      --color-surface-elevated: #FFFFFF;
+      --color-surface-input: #F0F8F0;
+      --color-text-primary: #0F1A0F;
+      --color-text-secondary: #2D4A2D;
+      --color-text-muted: #5A7A5A;
+      --color-text-inverse: #F4FBF4;
+      --color-brand-primary: #16A34A;
+      --color-brand-primary-hover: #15803D;
+      --color-brand-primary-light: rgba(22, 163, 74, 0.12);
+      --color-brand-accent: #D97706;
+      --color-border-default: rgba(15, 26, 15, 0.10);
+      --color-border-subtle: rgba(15, 26, 15, 0.05);
+      --color-border-focus: #16A34A;
+      --color-border-active: rgba(22, 163, 74, 0.35);
+      --color-announcement-bg: #15803D;
+      --color-announcement-text: #ffffff;
+    }
+
+    /* ============================================================
+         GLOBAL RESET & BASE
+         ============================================================ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--color-bg-primary);
+      color: var(--color-text-primary);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+      color: var(--color-text-primary);
+    }
+
+    /* ============================================================
+         ACCESSIBILITY: SKIP LINK & FOCUS RINGS
+         ============================================================ */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      padding: 8px 16px;
+      background: var(--color-brand-primary);
+      color: #fff;
+      z-index: 10000;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 0 0 8px 0;
+      transition: top 0.2s;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Visible keyboard focus rings — all interactive elements */
+    :focus-visible {
+      outline: 2px solid var(--color-border-focus);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    /* Remove focus ring for mouse clicks */
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    /* ============================================================
+         SCROLLBAR
+         ============================================================ */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--color-bg-primary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-surface-elevated);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-brand-primary);
+    }
+
+    /* ============================================================
+         REVEAL ANIMATIONS — transform + opacity only, NO layout
+         Duration: 260ms; Easing: cubic-bezier(.22,.9,.3,1); stagger via JS
+         ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 260ms cubic-bezier(0.22, 0.9, 0.3, 1),
+        transform 260ms cubic-bezier(0.22, 0.9, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+         CURSOR TRAIL (Desktop only)
+         Performance-safe: CSS transforms only, lerp 30–40ms
+         ============================================================ */
+    .cursor-dot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      background: var(--color-brand-primary);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width 160ms ease, height 160ms ease,
+        background 160ms ease, filter 160ms ease;
+      filter: blur(0px);
+      will-change: transform;
+    }
+
+    .cursor-dot.hovering {
+      width: 18px;
+      height: 18px;
+      background: var(--color-brand-primary);
+      filter: blur(2px);
+      opacity: 0.7;
+    }
+
+    /* cursor-ring: lagging 28px ring */
+    .cursor-ring {
+      position: fixed;
+      top: -14px;
+      left: -14px;
+      width: 28px;
+      height: 28px;
+      border: 1.5px solid var(--color-brand-primary);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9997;
+      opacity: 0.4;
+      will-change: transform, width, height;
+      transition: border-color 200ms ease, opacity 200ms ease,
+        width 160ms var(--ease-out), height 160ms var(--ease-out);
+    }
+
+    /* cursor-halo: 80px blur ambient glow */
+    .cursor-halo {
+      position: fixed;
+      top: -40px;
+      left: -40px;
+      width: 80px;
+      height: 80px;
+      background: var(--color-brand-primary);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9996;
+      opacity: 0.06;
+      filter: blur(20px);
+      will-change: transform;
+      transition: opacity 200ms ease;
+    }
+
+    /* Disable all cursor layers on touch/mobile */
+    @media (hover: none) {
+
+      .cursor-dot,
+      .cursor-ring,
+      .cursor-halo {
+        display: none;
+      }
+    }
+
+    /* ============================================================
+         COMMON UTILITY CLASSES
+         ============================================================ */
+    .text-gradient {
+      background: linear-gradient(to right, var(--color-text-primary), var(--color-brand-primary), #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .glass-card {
+      background: var(--color-bg-glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--color-border-default);
+    }
+
+    /* Utility: hide scrollbar */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* ============================================================
+         ANIMATIONS
+         ============================================================ */
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-marquee {
+      animation: marquee 30s linear infinite;
+    }
+
+    .animate-marquee-slow {
+      animation: marquee 60s linear infinite;
+    }
+
+    /* Fixed background layers */
+    .base-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-bg-primary);
+      z-index: -2;
+      transition: background-color 300ms ease;
+    }
+
+    .noise-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.02;
+      pointer-events: none;
+      z-index: 9990;
+    }
+
+    .grid-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      z-index: -1;
+      transition: opacity 300ms ease;
+    }
+
+    [data-theme^="light"] .grid-background {
+      background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    }
+
+    /* ============================================================
+         VERTICAL TEXT UTILITY
+         ============================================================ */
+    .vertical-text {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    /* ============================================================
+         CTA BUTTON SPEC
+         hover: scale(1.04), 160ms, cubic-bezier(0.23,1,0.32,1)
+         ============================================================ */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--color-brand-primary);
+      color: #ffffff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+        box-shadow 160ms cubic-bezier(0.23, 1, 0.32, 1),
+        background 160ms ease;
+      will-change: transform;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-brand-primary-hover);
+      transform: scale(1.04);
+      box-shadow: 0 0 30px rgba(59, 123, 255, 0.4);
+    }
+
+    .btn-primary:active {
+      transform: scale(0.98);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: transparent;
+      color: var(--color-text-primary);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--color-border-default);
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+        border-color 160ms ease,
+        background 160ms ease;
+    }
+
+    .btn-secondary:hover {
+      transform: scale(1.04);
+      border-color: var(--color-brand-primary);
+      background: var(--color-brand-primary-light);
+    }
+
+    /* ============================================================
+         MODAL BASELINE
+         ============================================================ */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      backdrop-filter: blur(8px);
+    }
+
+    .modal-panel {
+      background: var(--color-surface-card);
+      border: 1px solid var(--color-border-default);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 480px;
+      width: 100%;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    /* ============================================================
+         TIMELINE SLIDER TRACK
+         ============================================================ */
+    .timeline-track {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 16px;
+      padding: 24px 0 32px;
+      cursor: grab;
+    }
+
+    .timeline-track:active {
+      cursor: grabbing;
+    }
+
+    .timeline-track::-webkit-scrollbar {
+      height: 3px;
+    }
+
+    .timeline-track::-webkit-scrollbar-thumb {
+      background: var(--color-brand-primary);
+      border-radius: 3px;
+    }
+
+    .timeline-week-card {
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      width: 240px;
+      background: var(--color-surface-card);
+      border: 1px solid var(--color-border-default);
+      border-radius: 16px;
+      padding: 20px;
+      transition: border-color 200ms ease, transform 200ms ease;
+      will-change: transform;
+    }
+
+    .timeline-week-card:hover,
+    .timeline-week-card:focus-within {
+      border-color: var(--color-border-active);
+      transform: translateY(-2px);
+    }
+
+    /* ============================================================
+         STICKY CTA BAR
+         ============================================================ */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 30;
+      background: var(--color-bg-glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-top: 1px solid var(--color-border-default);
+      padding: 12px 24px;
+      transform: translateY(100%);
+      transition: transform 300ms cubic-bezier(0.22, 0.9, 0.3, 1);
+    }
+
+    .sticky-cta.visible {
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+         PAYMENT TABS (ARIA tablist pattern)
+         ============================================================ */
+    .payment-tab {
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid var(--color-border-default);
+      border-radius: 8px;
+      background: transparent;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      transition: all 160ms ease;
+    }
+
+    .payment-tab[aria-selected="true"] {
+      background: var(--color-brand-primary-light);
+      border-color: var(--color-brand-primary);
+      color: var(--color-brand-primary);
+    }
+  </style>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css" />
+</head>
+
+<body>
+  <!-- Accessibility: Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- 3-Layer Cursor Intelligence System (desktop only) -->
+  <div class="cursor-dot" aria-hidden="true" id="cursor-dot"></div>
+  <div class="cursor-ring" aria-hidden="true" id="cursor-ring"></div>
+  <div class="cursor-halo" aria-hidden="true" id="cursor-halo"></div>
+
+  <!-- Fixed Background Layers -->
+  <div class="base-bg" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <div id="root"></div>
+
+  <!-- 3-Layer Cursor Script — performance-safe, RAF-only, mobile disabled -->
+  <script>
+    (function () {
+      /* Touch / no-hover: bail out immediately */
+      if (window.matchMedia('(hover: none)').matches) return;
+
+      const dot = document.getElementById('cursor-dot');
+      const ring = document.getElementById('cursor-ring');
+      const halo = document.getElementById('cursor-halo');
+      if (!dot || !ring || !halo) return;
+
+      let mx = 0, my = 0;          // mouse position
+      let rx = 0, ry = 0;          // ring lerp position
+      let hx = 0, hy = 0;          // halo lerp position
+      let interactive = false;
+      let onText = false;
+
+      function lerp(a, b, t) { return a + (b - a) * t; }
+
+      /* Fast snap for dot; slower lerp for ring + halo */
+      document.addEventListener('mousemove', e => {
+        mx = e.clientX;
+        my = e.clientY;
+        dot.style.transform = `translate(${mx}px, ${my}px)`;
+      }, { passive: true });
+
+      /* Detect interactive / text zones */
+      document.addEventListener('mouseover', e => {
+        const t = e.target;
+        if (!t) return;
+        interactive = t.matches('a, button, [role="button"], [tabindex], input, select, textarea, label');
+        onText = t.tagName === 'P' || t.tagName === 'SPAN' || t.tagName === 'H1' ||
+          t.tagName === 'H2' || t.tagName === 'H3' || t.tagName === 'LI';
+      });
+
+      function raf() {
+        rx = lerp(rx, mx, 0.14);   // ring: ~80ms lag
+        ry = lerp(ry, my, 0.14);
+        hx = lerp(hx, mx, 0.07);   // halo: ~120ms lag
+        hy = lerp(hy, my, 0.07);
+
+        ring.style.transform = `translate(${rx}px, ${ry}px)`;
+        halo.style.transform = `translate(${hx}px, ${hy}px)`;
+
+        if (interactive) {
+          dot.style.width = '10px';
+          dot.style.height = '10px';
+          dot.style.mixBlendMode = 'difference';
+          ring.style.width = '44px';
+          ring.style.height = '44px';
+          ring.style.opacity = '0.6';
+          halo.style.opacity = '0.1';
+        } else if (onText) {
+          dot.style.width = '3px';
+          dot.style.height = '3px';
+          dot.style.mixBlendMode = 'normal';
+          ring.style.width = '20px';
+          ring.style.height = '20px';
+          ring.style.opacity = '0.2';
+          halo.style.opacity = '0.04';
+        } else {
+          dot.style.width = '7px';
+          dot.style.height = '7px';
+          dot.style.mixBlendMode = 'normal';
+          ring.style.width = '28px';
+          ring.style.height = '28px';
+          ring.style.opacity = '0.4';
+          halo.style.opacity = '0.06';
+        }
+
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    })();
+  </script>
+
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>

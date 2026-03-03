@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Space Grotesk", "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", "Courier New", ui-monospace, monospace;
+
+  /* Token bridge: Tailwind color tokens → CSS vars */
+  --color-brand: var(--color-brand-primary);
+  --color-brand-hover: var(--color-brand-primary-hover);
+  --color-accent: var(--color-brand-accent);
+  --color-surface: var(--color-surface-card);
+  --color-muted: var(--color-text-muted);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+  ::selection {
+    background-color: var(--color-brand-primary-light);
+    color: var(--color-text-primary);
+  }
+}
+
+@layer utilities {
+  /* Gradient text — token-mapped */
+  .text-gradient {
+    background: linear-gradient(to right, var(--color-text-primary), var(--color-brand-primary), #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Phase color utilities */
+  .text-phase-discover  { color: var(--phase-discover); }
+  .text-phase-validate  { color: var(--phase-validate); }
+  .text-phase-build     { color: var(--phase-build); }
+  .text-phase-operate   { color: var(--phase-operate); }
+  .text-phase-grow      { color: var(--phase-grow); }
+  .text-phase-fundraise { color: var(--phase-fundraise); }
+
+  .bg-phase-discover  { background-color: var(--phase-discover); }
+  .bg-phase-validate  { background-color: var(--phase-validate); }
+  .bg-phase-build     { background-color: var(--phase-build); }
+  .bg-phase-operate   { background-color: var(--phase-operate); }
+  .bg-phase-grow      { background-color: var(--phase-grow); }
+  .bg-phase-fundraise { background-color: var(--phase-fundraise); }
+
+  /* Token-aware text colors */
+  .text-token-primary   { color: var(--color-text-primary); }
+  .text-token-secondary { color: var(--color-text-secondary); }
+  .text-token-muted     { color: var(--color-text-muted); }
+
+  /* Token-aware backgrounds */
+  .bg-token-primary   { background-color: var(--color-bg-primary); }
+  .bg-token-secondary { background-color: var(--color-bg-secondary); }
+  .bg-token-surface   { background-color: var(--color-surface-card); }
+
+  /* Border token */
+  .border-token { border-color: var(--color-border-default); }
+  .border-token-subtle { border-color: var(--color-border-subtle); }
+  .border-token-active { border-color: var(--color-border-active); }
+}
